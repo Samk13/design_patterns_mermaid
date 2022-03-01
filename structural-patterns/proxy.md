@@ -1,29 +1,28 @@
-# Adapter
-Converts the interface of a class into another interface clients expect
-
+# Proxy
+Provides a surrogate or placeholder for another object to control access to it
 ---
 $~$
 ```mermaid
 classDiagram
 direction LR
 
-Client --> Target
-Target <|--Adapter
-Adapter -->Adaptee
+Proxy --> RealSubject
+ Client --> Subject
+RealSubject --|> Subject
+Proxy --|> Subject
 
 
 class Client {
  }
-class Target {
-    +Request()
+class Subject {
+  +Request()
  }
-class Adapter {
-    +Request()
+class Proxy {
++Request()
  }
-class Adaptee {
-    +SpecificRequest()
+class RealSubject {
++Request()
  }
-
 ```
 $~$
 ## implemetation in Python:

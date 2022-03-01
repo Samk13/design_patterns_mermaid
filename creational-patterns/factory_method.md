@@ -7,9 +7,9 @@ $~$
 classDiagram
 direction LR
 
-Product <-- ConcreteProduct  : builds
-ConcreteProduct <.. ConcreteCreator
- ConcreteCreator --> Creator
+ConcreteProduct <.. ConcreteCreator : Creates
+Product <|-- ConcreteProduct
+ ConcreteCreator --|> Creator
 
   class Creator {
     +FactoryMethod()

@@ -1,29 +1,25 @@
-# Abstract Factory
-Provides an interface for creating families of related or dependent objects without specifying their concrete classes
+# Chain of Responsibility
+Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request
 ---
 $~$
 ```mermaid
 classDiagram
 direction LR
-Client --> AbstractFactory
-Client --> AbstractProduct
-AbstractFactory <|-- ConcreteFactory
-AbstractProduct <|-- ProductA
-AbstractProduct <|-- ProductB
-ProductA <.. ConcreteFactory : creates
-ProductB <.. ConcreteFactory : creates
 
+Client --> Handler
+Handler <|-- ConcreteHandler2
+Handler o-- ConcreteHandler2
+Handler <|-- ConcreteHandler1
   class Client {
   }
-  class AbstractFactory{
-    +CreateProductA()
-    +CreateProductB()
+  class Handler{
+    +HandleRequest()
   }
-class ConcreteFactory{
-    +Create productA()
-    +Create productB()
+class ConcreteHandler1{
+  +HandleRequest()
   }
-  class AbstractProduct{
+  class ConcreteHandler2{
+    +HandleRequest()
   }
 ```
 $~$

@@ -7,8 +7,8 @@ classDiagram
 direction LR
 
 Client --> Abstraction
-Implementor <-- ConcreteImplementorB
-Implementor <-- ConcreteImplementorA
+Implementor <|-- ConcreteImplementorB
+Implementor <|-- ConcreteImplementorA
 Implementor --o Abstraction
 
 class Client {

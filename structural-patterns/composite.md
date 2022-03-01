@@ -8,8 +8,8 @@ direction LR
 
 Component --o Composite
 Client --> Component
-Component <-- Leaf
-Component <-- Composite
+Component <|-- Leaf
+Component <|-- Composite
 
 
 class Client {

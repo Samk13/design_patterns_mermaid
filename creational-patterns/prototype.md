@@ -7,8 +7,8 @@ classDiagram
 direction LR
 
 Client --> Prototype
- Prototype <-- ConcretePrototype1
- Prototype <-- ConcretePrototype2
+ Prototype <|-- ConcretePrototype1
+ Prototype <|-- ConcretePrototype2
 
 
 class Prototype {

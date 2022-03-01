@@ -7,10 +7,12 @@ classDiagram
 direction LR
 
 Builder --o Director
- ConcreteBuilder --> Builder
+ ConcreteBuilder --|> Builder
 Product <.. ConcreteBuilder  : builds
 
   class Director {
++Construct()
+
   }
   class Builder{
     +BuildPart()
