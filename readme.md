@@ -2,3 +2,5 @@
 
 ## Creational Patterns
 ## [Abstract Factory](creational-patterns/abstract_factory.md)
+
+## [Builder](creational-patterns/builder.md)

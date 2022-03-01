@@ -1,7 +1,7 @@
 # Abstract Factory
 Provides an interface for creating families of related or dependent objects without specifying their concrete classes
 ---
-
+$~$
 ```mermaid
 classDiagram
 direction LR
@@ -26,6 +26,7 @@ class ConcreteFactory{
   class AbstractProduct{
   }
 ```
+$~$
 ## implemetation in python:
 <a href="https://en.wikipedia.org/wiki/Abstract_factory_pattern" target="_blank">wikipedia</a>
 ```python
