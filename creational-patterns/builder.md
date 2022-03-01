@@ -25,174 +25,77 @@ $~$
 ## implemetation in python:
 <a href="https://en.wikipedia.org/wiki/Builder_pattern#:~:text=The%20builder%20pattern%20is%20a,Gang%20of%20Four%20design%20patterns." target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+"""
+Builder Concept Sample Code
+https://sbcode.net/python/builder/#builderbuilder_conceptpy
+"""
+from abc import ABCMeta, abstractmethod
 
-# Example of `builder' design pattern
-# Copyright (C) 2011 Radek Pazdera
+class IBuilder(metaclass=ABCMeta):
+    "The Builder Interface"
 
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+    @staticmethod
+    @abstractmethod
+    def build_part_a():
+        "Build part a"
 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
+    @staticmethod
+    @abstractmethod
+    def build_part_b():
+        "Build part b"
 
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
+    @staticmethod
+    @abstractmethod
+    def build_part_c():
+        "Build part c"
 
-class Director:
+    @staticmethod
+    @abstractmethod
+    def get_result():
+        "Return the final product"
 
-    """ Controls the construction process.
-    Director has a builder associated with him. Director then
-    delegates building of the smaller parts to the builder and
-    assembles them together.
-    """
-
-    __builder = None
-
-    def setBuilder(self, builder):
-        self.__builder = builder
-
-    # The algorithm for assembling a car
-    def getCar(self):
-        car = Car()
-
-        # First goes the body
-        body = self.__builder.getBody()
-        car.setBody(body)
-
-        # Then engine
-        engine = self.__builder.getEngine()
-        car.setEngine(engine)
-
-        # And four wheels
-        i = 0
-        while i < 4:
-            wheel = self.__builder.getWheel()
-            car.attachWheel(wheel)
-            i += 1
-
-        return car
-
-# The whole product
-class Car:
-
-    """ The final product.
-    A car is assembled by the `Director' class from
-    parts made by `Builder'. Both these classes have
-    influence on the resulting object.
-    """
+class Builder(IBuilder):
+    "The Concrete Builder."
 
     def __init__(self):
-        self.__wheels  = list()
-        self.__engine  = None
-        self.__body    = None
+        self.product = Product()
 
-    def setBody(self, body):
-        self.__body = body
+    def build_part_a(self):
+        self.product.parts.append('a')
+        return self
 
-    def attachWheel(self, wheel):
-        self.__wheels.append(wheel)
+    def build_part_b(self):
+        self.product.parts.append('b')
+        return self
 
-    def setEngine(self, engine):
-        self.__engine = engine
+    def build_part_c(self):
+        self.product.parts.append('c')
+        return self
 
-    def specification(self):
-        print "body: %s" % self.__body.shape
-        print "engine horsepower: %d" % self.__engine.horsepower
-        print "tire size: %d\'" % self.__wheels[0].size
+    def get_result(self):
+        return self.product
 
+class Product():
+    "The Product"
 
-class Builder:
+    def __init__(self):
+        self.parts = []
 
-    """ Creates various parts of a vehicle.
-    This class is responsible for constructing all
-    the parts for a vehicle.
-    """
+class Director:
+    "The Director, building a complex representation."
 
-    def getWheel(self): pass
-    def getEngine(self): pass
-    def getBody(self): pass
+    @staticmethod
+    def construct():
+        "Constructs and returns the final product"
+        return Builder()\
+            .build_part_a()\
+            .build_part_b()\
+            .build_part_c()\
+            .get_result()
 
-
-class JeepBuilder(Builder):
-
-    """ Concrete Builder implementation.
-    This class builds parts for Jeep's SUVs.
-    """
-
-    def getWheel(self):
-        wheel = Wheel()
-        wheel.size = 22
-        return wheel
-
-    def getEngine(self):
-        engine = Engine()
-        engine.horsepower = 400
-        return engine
-
-    def getBody(self):
-        body = Body()
-        body.shape = "SUV"
-        return body
-
-class NissanBuilder(Builder):
-
-    """ Concrete Builder implementation.
-    This class builds parts for Nissan's family cars.
-    """
-
-    def getWheel(self):
-        wheel = Wheel()
-        wheel.size = 16
-        return wheel
-
-    def getEngine(self):
-        engine = Engine()
-        engine.horsepower = 85
-        return engine
-
-    def getBody(self):
-        body = Body()
-        body.shape = "hatchback"
-        return body
-
-# Car parts
-class Wheel:
-    size = None
-
-class Engine:
-    horsepower = None
-
-class Body:
-    shape = None
-
-def main():
-    jeepBuilder = JeepBuilder()
-    nissanBuilder = NissanBuilder()
-
-    director = Director()
-
-    # Build Jeep
-    print "Jeep"
-    director.setBuilder(jeepBuilder)
-    jeep = director.getCar()
-    jeep.specification()
-
-    print ""
-
-    # Build Nissan
-    print "Nissan"
-    director.setBuilder(nissanBuilder)
-    nissan = director.getCar()
-    nissan.specification()
-
-if __name__ == "__main__":
-    main()
+# The Client
+PRODUCT = Director.construct()
+print(PRODUCT.parts)
 ```
 # JavaScrip implementation:
 
