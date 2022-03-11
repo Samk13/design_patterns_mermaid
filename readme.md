@@ -4,7 +4,7 @@
 ## [Abstract Factory](creational-patterns/abstract_factory.md)
 
 ## [Builder](creational-patterns/builder.md)
-## [Factory Method](creational-patterns/factory_method)
+## [Factory Method](creational-patterns/factory_method.md)
 ## [Prototype](creational-patterns/prototype.md)
 ## [Singleton](creational-patterns/singleton.md)
 
