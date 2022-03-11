@@ -1,7 +1,6 @@
 # Flyweight
 Uses sharing to support large numbers of fine-grained objects efficiently
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -32,7 +31,6 @@ class UnsharedFlyweight {
   +Operation(state)
  }
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

@@ -1,7 +1,6 @@
 # Composite
 Composes objects into tree structures to represent part-whole hierarchies
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -31,7 +30,6 @@ class Leaf {
  }
 
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

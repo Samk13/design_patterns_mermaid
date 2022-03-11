@@ -1,7 +1,6 @@
 # Decorator
 Attaches additional responsibilities to an object dynamically
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -27,7 +26,6 @@ class ConcreteDecorator {
  }
 
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

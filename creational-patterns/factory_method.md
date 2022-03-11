@@ -2,7 +2,6 @@
 Defines an interface for creating an object but let subclasses decide which class to
 instantiate
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -24,7 +23,6 @@ class ConcreteProduct{
   class Product{
   }
 ```
-$~$
 ## implemetation in python:
 <a href="https://en.wikipedia.org/wiki/ConcreteCreator_pattern#:~:text=The%20ConcreteCreator%20pattern%20is%20a,Gang%20of%20Four%20design%20patterns." target="_blank">WIKIPEDIA ConcreteCreator PATTERN</a>
 ```python

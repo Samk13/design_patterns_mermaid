@@ -1,7 +1,6 @@
 # Facade
 Provides a unified interface to a set of interfaces in a subsystem
 ---
-$~$
 ```mermaid
 flowchart TB
     Facade---> sub1
@@ -20,7 +19,6 @@ flowchart TB
       sub6
     end
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

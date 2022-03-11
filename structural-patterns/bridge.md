@@ -1,7 +1,6 @@
 # Bridge
 Decouples an abstraction from its implementation so that the two can vary independently
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -27,7 +26,6 @@ class ConcreteImplementorA {
  }
 
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

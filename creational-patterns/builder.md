@@ -1,7 +1,6 @@
 # Builder pattern
 Separates the construction of a complex object from its representation so that the same construction process can create different representations.
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -23,7 +22,6 @@ class ConcreteBuilder{
   class Product{
   }
 ```
-$~$
 ## implemetation in python:
 <a href="https://en.wikipedia.org/wiki/Builder_pattern#:~:text=The%20builder%20pattern%20is%20a,Gang%20of%20Four%20design%20patterns." target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

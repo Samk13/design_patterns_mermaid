@@ -1,7 +1,6 @@
 # Prototype
 Specifies the kinds of objects to create using a prototypical instance and create new objects by copying this prototype
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -24,7 +23,6 @@ class ConcretePrototype2{
 }
 
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python

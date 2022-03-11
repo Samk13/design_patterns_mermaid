@@ -1,7 +1,6 @@
 # Proxy
 Provides a surrogate or placeholder for another object to control access to it
 ---
-$~$
 ```mermaid
 classDiagram
 direction LR
@@ -24,7 +23,6 @@ class RealSubject {
 +Request()
  }
 ```
-$~$
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python
