@@ -1,7 +1,7 @@
 # Chain of Responsibility
 Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request
----
-$~$
+--
+
 ```mermaid
 classDiagram
 direction LR
@@ -22,7 +22,7 @@ class ConcreteHandler1{
     +HandleRequest()
   }
 ```
-$~$
+
 ## implemetation in python:
 <a href="https://en.wikipedia.org/wiki/Abstract_factory_pattern" target="_blank">wikipedia</a>
 ```python

@@ -8,15 +8,15 @@
 ## [Prototype](creational-patterns/prototype.md)
 ## [Singleton](creational-patterns/singleton.md)
 
-$~$
+---
 ## Structural Patterns
 ---
 ## [Adapter](structural-patterns/adapter.md)
 ## [Bridge](structural-patterns/bridge.md)
 ## [Composite](structural-patterns/composite.md)
 ## [Decorator](structural-patterns/decorator.md)
-## [Facade](structural-patterns/facade.md)
-## [Flyweight](structural-patterns/flyweight.md)
+## [facade](structural-patterns/facade.md)
+## [flyweight](structural-patterns/flyweight.md)
 ## [Proxy](structural-patterns/proxy.md)
 
 ## Behavioral Patterns

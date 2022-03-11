@@ -25,7 +25,7 @@ class Adaptee {
  }
 
 ```
-$~$
+
 ## implemetation in Python:
 <a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python
