@@ -22,3 +22,6 @@
 ## Behavioral Patterns
 ## [Proxy](structural-patterns/proxy.md)
 
+## UML class diagran:
+## [UML](uml-diagram/uml.md)
+
