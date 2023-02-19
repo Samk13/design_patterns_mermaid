@@ -42,29 +42,4 @@
 # mermaid arrows explaination:
 In Mermaid diagrams, arrows represent the relationship between two elements. They indicate the direction of the relationship and can be customized with different arrow types.
 
-There are several types of arrow directions and styles you can use in Mermaid:
-
-`-->` : The standard arrow, indicating a one-way relationship from the left element to the right element.
-
-`---` : A two-way relationship, indicating that both elements have a relationship with each other.
-
-`-->|` : A dashed arrow indicating a one-way relationship from the left element to the right element.
-
-`---|` : A dashed two-way relationship between two elements.
-
-`--x` : An arrow with a crossbar, indicating a relationship that has been terminated.
-
-`--o` : An arrow with a circle, indicating a relationship that has been looped back to the starting point.
-
-`--|>`: An arrowhead is a closed triangle, this Represent an inheritance or implementation relationship between classes or interfaces.
-
-```mermaid
-graph LR
-A-->|The standard arrow, indicating a one-way relationship from the left element to the right element.|B
-C---|A two-way relationship, indicating that both elements have a relationship with each other.|D
-E-->|A dashed arrow indicating a one-way relationship from the left element to the right element.|F
-G---|A dashed two-way relationship between two elements.|H
-I--x|An arrow with a crossbar, indicating a relationship that has been terminated.|J
-K--o|An arrow with a circle, indicating a relationship that has been looped back to the starting point.|L
-
-```
+[Wiki](https://en.wikipedia.org/wiki/Class_diagram)
