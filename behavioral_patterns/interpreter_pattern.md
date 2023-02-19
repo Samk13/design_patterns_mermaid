@@ -4,7 +4,7 @@ In the Interpreter Pattern, you define a set of language rules or grammar, and t
 
 ```mermaid
 classDiagram
-direction TB
+direction LR
 
 Context --> Expression
 Context o--> TerminalExpression

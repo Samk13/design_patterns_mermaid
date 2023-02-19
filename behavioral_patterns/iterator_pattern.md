@@ -5,7 +5,7 @@ In the Iterator pattern, a separate iterator object is created, which encapsulat
 
 ```mermaid
 classDiagram
-direction TB
+direction LR
 
 Iterator <|-- ConcreteIterator
 Aggregate <|-- ConcreteAggregate

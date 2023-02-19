@@ -6,7 +6,7 @@ In the Command pattern, requests are encapsulated as objects, which decouples th
 
 ```mermaid
 classDiagram
-direction TB
+direction LR
 
 Client --|> Invoker
 Invoker o--> Command

@@ -6,7 +6,7 @@ An example use case of the mediator pattern is in a chat application, where mult
 TODO
 ```mermaid
 classDiagram
-direction TB
+direction LR
 
 Mediator <|-- ConcreteMediator
 Colleague <|-- ConcreteColleague1
