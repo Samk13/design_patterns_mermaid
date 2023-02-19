@@ -36,3 +36,29 @@
 ## UML class diagran
 
 ### [UML](uml-diagram/uml.md)
+
+# mermaid arrows explaination:
+In Mermaid diagrams, arrows represent the relationship between two elements. They indicate the direction of the relationship and can be customized with different arrow types.
+
+There are several types of arrow directions and styles you can use in Mermaid:
+
+--> : The standard arrow, indicating a one-way relationship from the left element to the right element.
+--- : A two-way relationship, indicating that both elements have a relationship with each other.
+-->| : A dashed arrow indicating a one-way relationship from the left element to the right element.
+---| : A dashed two-way relationship between two elements.
+--x : An arrow with a crossbar, indicating a relationship that has been terminated.
+--o : An arrow with a circle, indicating a relationship that has been looped back to the starting point.
+
+````mermaid
+graph LR
+A-->B;     %% Standard arrow, one-way relationship
+C---D;     %% Two-way relationship
+E-->|dashed|F;   %% One-way dashed relationship
+G---|dashed|H;   %% Two-way dashed relationship
+I--x|terminated|J;  %% Terminated relationship
+K--o|looped back|L; %% Looped back relationship
+
+style A, C, E, G, I, K fill:#fff,stroke:#333,stroke-width:2px;  %% Styling the nodes
+style B, D, F, H, J, L fill:#fff,stroke:#333,stroke-width:4px, stroke-dasharray: 5, 5;  %% Styling the nodes
+
+```
