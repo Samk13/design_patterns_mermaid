@@ -1,14 +1,14 @@
 # Design Patterns Cheat Sheet using mermaid mermaid
+<br><br />
 
 ## Creational Patterns
 ### [Abstract Factory](creational-patterns/abstract_factory.md)
-
 ### [Builder](creational-patterns/builder.md)
 ### [Factory Method](creational-patterns/factory_method.md)
 ### [Prototype](creational-patterns/prototype.md)
 ### [Singleton](creational-patterns/singleton.md)
 
----
+<br><br />
 ## Structural Patterns
 ---
 ### [Adapter](structural-patterns/adapter.md)
@@ -19,8 +19,9 @@
 ### [flyweight](structural-patterns/flyweight.md)
 ### [Proxy](structural-patterns/proxy.md)
 ### [Proxy](structural-patterns/proxy.md)
-
+<br><br />
 ## Behavioral Patterns
+---
 ### [Chain of Responsibility](behavioral_patterns/chain_of_responsibility.md)
 ### [Command Pattern](behavioral_patterns/command_pattern.md)
 ### [Interpreter Pattern](behavioral_patterns/interpreter_pattern.md)
@@ -34,6 +35,9 @@
 ### [Visitor Pattern](behavioral_patterns/visitor_pattern.md)
 
 
-## UML class diagran:
+<br><br />
+## UML class diagran
+---
+
 ### [UML](uml-diagram/uml.md)
 
