@@ -133,7 +133,23 @@ if __name__ == "__main__":
 # Implementation in JavaScript:
 
 ```js
-TODO
+class Product {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class ProductFactory {
+  createProduct(name) {
+    return new Product(name);
+  }
+}
+
+// Usage
+const factory = new ProductFactory();
+const product = factory.createProduct("Product 1");
+console.log(`Created ${product.name}`);
+
 ```
 
 ## [Back to main](../readme.md)

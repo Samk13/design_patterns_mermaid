@@ -31,7 +31,6 @@ class Leaf {
 
 ```
 ## implemetation in Python:
-<a href="" target="_blank">WIKIPEDIA BUILDER PATTERN</a>
 ```python
 """
 Bridge pattern example.
@@ -113,9 +112,65 @@ class BridgePattern:
 BridgePattern.test()
 ```
 # Implementation in JavaScrip:
-
+Let's say we have a hierarchy of components in a user interface, where each component can be either a leaf component or a composite component that contains other components. We want to be able to render the user interface and add/remove components dynamically. Here's an example:
 ```js
-// TODO
+class Component {
+  constructor(name) {
+    this.name = name;
+  }
+
+  render() {
+    console.log(this.name);
+  }
+
+  add(component) {}
+
+  remove(component) {}
+
+  getChild(index) {}
+}
+
+class Composite extends Component {
+  constructor(name) {
+    super(name);
+    this.children = [];
+  }
+
+  add(component) {
+    this.children.push(component);
+  }
+
+  remove(component) {
+    const index = this.children.indexOf(component);
+    this.children.splice(index, 1);
+  }
+
+  getChild(index) {
+    return this.children[index];
+  }
+
+  render() {
+    console.log(this.name);
+    for (const child of this.children) {
+      child.render();
+    }
+  }
+}
+
+// Using the Composite
+const button = new Component("Button");
+const label = new Component("Label");
+const checkbox = new Component("Checkbox");
+
+const form = new Composite("Form");
+form.add(button);
+form.add(label);
+
+const page = new Composite("Page");
+page.add(form);
+page.add(checkbox);
+
+page.render();  // Output: Page, Form, Button, Label, Checkbox
 ```
 
 ## [Back to main](../readme.md)
