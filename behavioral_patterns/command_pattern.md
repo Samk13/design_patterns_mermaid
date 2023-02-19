@@ -1,8 +1,8 @@
 # Command Pattern
-The Command pattern is a behavioral design pattern that turns requests into objects, allowing the client to encapsulate actions and parameters. The Command pattern can be used to implement undo-redo operations, queue requests, log requests, or support transactions.
 
+The Command pattern is a behavioral design pattern that turns requests into objects, allowing the client to encapsulate actions and parameters. The Command pattern can be used to implement undo-redo operations, queue requests, log requests, or support transactions.
 In the Command pattern, requests are encapsulated as objects, which decouples the requester from the object that performs the action. The requester does not need to know anything about the action being performed, except for the Command object that represents the action.
---
+
 
 ```mermaid
 classDiagram
