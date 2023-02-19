@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/front-matter/talbot?logo=MIT)
+
 # Design Patterns Cheat Sheet using mermaid mermaid
 
 ## Creational Patterns
