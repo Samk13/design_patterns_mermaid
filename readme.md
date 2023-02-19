@@ -42,17 +42,17 @@ In Mermaid diagrams, arrows represent the relationship between two elements. The
 
 There are several types of arrow directions and styles you can use in Mermaid:
 
---> : The standard arrow, indicating a one-way relationship from the left element to the right element.
+`-->` : The standard arrow, indicating a one-way relationship from the left element to the right element.
 
---- : A two-way relationship, indicating that both elements have a relationship with each other.
+`---` : A two-way relationship, indicating that both elements have a relationship with each other.
 
--->| : A dashed arrow indicating a one-way relationship from the left element to the right element.
+`-->|` : A dashed arrow indicating a one-way relationship from the left element to the right element.
 
----| : A dashed two-way relationship between two elements.
+`---|` : A dashed two-way relationship between two elements.
 
---x : An arrow with a crossbar, indicating a relationship that has been terminated.
+`--x` : An arrow with a crossbar, indicating a relationship that has been terminated.
 
---o : An arrow with a circle, indicating a relationship that has been looped back to the starting point.
+`--o` : An arrow with a circle, indicating a relationship that has been looped back to the starting point.
 
 
 ```mermaid
