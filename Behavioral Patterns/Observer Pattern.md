@@ -6,32 +6,28 @@ classDiagram
 direction LR
 
 Subject <|-- ConcreteSubject
-Observer <|-- ConcreteObserver
-
-Subject --> Observer
-Subject --> detach()
-Subject --> attach()
-
-class Subject {
-  -observers: Observer[]
-  +attach(observer: Observer)
-  +detach(observer: Observer)
-  +notify()
-}
-
-class ConcreteSubject {
-  +setState(state: any)
-  +getState(): any
-}
-
-class Observer {
-  +update()
-}
-
-class ConcreteObserver {
-  +update()
-}
-
+Subject *-- Observer
+Observer <|-- ConcreteObserverA
+Observer <|-- ConcreteObserverB
+  class Subject{
+    -observers: Observer[]
+    +attach(observer: Observer)
+    +detach(observer: Observer)
+    +notify()
+  }
+  class ConcreteSubject{
+    +getState()
+    +setState(state: any)
+  }
+  class Observer{
+    +update()
+  }
+  class ConcreteObserverA{
+    +update()
+  }
+  class ConcreteObserverB{
+    +update()
+  }
 ```
 
 ## implemetation in python:
