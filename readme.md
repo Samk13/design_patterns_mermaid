@@ -51,14 +51,10 @@ There are several types of arrow directions and styles you can use in Mermaid:
 
 ````mermaid
 graph LR
-A-->B;     %% Standard arrow, one-way relationship
-C---D;     %% Two-way relationship
-E-->|dashed|F;   %% One-way dashed relationship
-G---|dashed|H;   %% Two-way dashed relationship
-I--x|terminated|J;  %% Terminated relationship
-K--o|looped back|L; %% Looped back relationship
-
-style A, C, E, G, I, K fill:#fff,stroke:#333,stroke-width:2px;  %% Styling the nodes
-style B, D, F, H, J, L fill:#fff,stroke:#333,stroke-width:4px, stroke-dasharray: 5, 5;  %% Styling the nodes
-
+A-Standard arrow, one-way relationship->B;
+C-Two-way relationship--D;
+E-One-way dashed relationship->|dashed|F;
+G-Two-way dashed relationship--|dashed|H;
+I-Terminated relationship-x|terminated|J;
+K-Looped back relationship-o|looped back|L;
 ```
