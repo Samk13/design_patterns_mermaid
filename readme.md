@@ -54,6 +54,7 @@ There are several types of arrow directions and styles you can use in Mermaid:
 
 `--o` : An arrow with a circle, indicating a relationship that has been looped back to the starting point.
 
+`--|>`: An arrowhead is a closed triangle, this Represent an inheritance or implementation relationship between classes or interfaces.
 
 ```mermaid
 graph LR
@@ -63,5 +64,6 @@ E-->|A dashed arrow indicating a one-way relationship from the left element to t
 G---|A dashed two-way relationship between two elements.|H
 I--x|An arrow with a crossbar, indicating a relationship that has been terminated.|J
 K--o|An arrow with a circle, indicating a relationship that has been looped back to the starting point.|L
+K--|>| closed triangle, inheritance or implementation relationship between classes or interfaces..|M
 
 ```
