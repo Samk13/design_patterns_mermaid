@@ -5,27 +5,27 @@ TODO
 classDiagram
 direction LR
 
-Context *-- StateInterface
-Context --> ConcreteState1
-Context --> ConcreteState2
-
-class Context {
-  -state: StateInterface
-  +setState(state: StateInterface)
-  +request()
-}
-
-interface StateInterface {
-  +handle()
-}
-
-class ConcreteState1 {
-  +handle()
-}
-
-class ConcreteState2 {
-  +handle()
-}
+Context --> State
+Context *-- Client
+State <|.. StateInterface
+State <|-- ConcreteStateA
+State <|-- ConcreteStateB
+  class Client {
+  }
+  class Context{
+    -state:StateInterface
+    +setState(state: StateInterface)
+    +doSomething()
+  }
+  class StateInterface{
+    +doSomething()
+  }
+  class ConcreteStateA{
+    +doSomething()
+  }
+  class ConcreteStateB{
+    +doSomething()
+  }
 
 ```
 
