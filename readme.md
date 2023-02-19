@@ -50,11 +50,12 @@ There are several types of arrow directions and styles you can use in Mermaid:
 --o : An arrow with a circle, indicating a relationship that has been looped back to the starting point.
 
 ````mermaid
-graph LR
-A-- Standard arrow, one-way relationship -->B;
-C--- Two way relationship ---D;
-E--One way dashed relationship -->|dashed|F;
-G--Two way dashed relationship --|dashed|H;
-I-- Terminated relationship --x|terminated|J;
-K-- Looped back relationship --o|looped back|L;
+graph TD
+A-->|The standard arrow, indicating a one-way relationship from the left element to the right element.|B
+C---|A two-way relationship, indicating that both elements have a relationship with each other.|D
+E-->|A dashed arrow indicating a one-way relationship from the left element to the right element.|F
+G---|A dashed two-way relationship between two elements.|H
+I--x|An arrow with a crossbar, indicating a relationship that has been terminated.|J
+K--o|An arrow with a circle, indicating a relationship that has been looped back to the starting point.|L
+
 ```
