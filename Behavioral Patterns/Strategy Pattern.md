@@ -5,27 +5,27 @@ TODO
 classDiagram
 direction LR
 
-Context *-- StrategyInterface
-Context --> ConcreteStrategy1
-Context --> ConcreteStrategy2
-
-class Context {
-  -strategy: StrategyInterface
-  +setStrategy(strategy: StrategyInterface)
-  +executeStrategy(): string
-}
-
-interface StrategyInterface {
-  +execute(): string
-}
-
-class ConcreteStrategy1 {
-  +execute(): string
-}
-
-class ConcreteStrategy2 {
-  +execute(): string
-}
+Context --> Strategy
+Context *-- Client
+Strategy <|-- ConcreteStrategyA
+Strategy <|-- ConcreteStrategyB
+Strategy <|.. StrategyInterface
+  class Client {
+  }
+  class Context{
+    -strategy:StrategyInterface
+    +setStrategy(strategy: StrategyInterface)
+    +doSomething()
+  }
+  class StrategyInterface{
+    +doSomething()
+  }
+  class ConcreteStrategyA{
+    +doSomething()
+  }
+  class ConcreteStrategyB{
+    +doSomething()
+  }
 
 ```
 
